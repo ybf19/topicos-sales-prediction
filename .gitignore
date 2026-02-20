@@ -1,5 +1,195 @@
-# .gitignore
+# 📦 Datos y archivos grandes (¡OBLIGATORIO!)
+# Evita subir datasets completos a GitHub (superan el límite de 100MB y no deben versionarse)
 data/
+*.csv
+*.xlsx
+*.json
+*.parquet
+*.avro
+*.orc
+*.txt
+!data/sample_*.csv          # Excepción: solo archivos que empiecen con "sample_" (muestras pequeñas)
+!sample_data/
+
+# 🐍 Python y PySpark
+# Archivos compilados y cachés
+__pycache__/
+*.py[cod]
+*.so
+.Python/
+
+# Entornos virtuales
+venv/
+env/
+ENV/
 .venv/
+myenv/
+virtualenv/
 
+# Notebooks (pueden contener rutas absolutas o datos sensibles)
+.ipynb_checkpoints/
+*.ipynb
+!notebooks/exploratory_analysis.ipynb   # Excepción para un notebook de ejemplo
 
+# Jupyter
+.jupyter/
+jupyter_notebook_config.py
+
+# 📊 Archivos de Spark y Hadoop
+# Logs y metadatos temporales
+*.log
+*.pid
+*.timestamp
+metastore_db/
+derby.log
+spark-warehouse/
+spark-events/
+
+# Directorios de trabajo de Spark
+checkpoints/
+*.crc
+._SUCCESS.crc
+
+# 💾 MongoDB
+# Configuraciones de conexión y datos locales
+mongod.conf
+*.bson
+*.mongodb
+dump/
+mongod.log
+config/mongodb_credentials.json   # ¡NUNCA subir credenciales!
+
+# 📈 Power BI
+# Archivos de caché y datos locales
+*.pbix
+!docs/powerbi_dashboards/final_dashboard.png   # Solo la imagen, no el archivo .pbix pesado
+*.pbi
+*.pbix.user
+*.pbix.user.json
+*.pbix.user.old
+*.pbix.user.bak
+*.pbix.user.tmp
+*.pbix.user.log
+*.Report/
+*.Dataset/
+*.Model/
+*.ReportCache/
+*.ReportCache.bak
+*.ReportCache.tmp
+
+# 🔧 Jenkins y CI/CD
+# Configuraciones locales y workspaces
+workspace/
+jenkins_home/
+*.jenkins
+config.xml
+*.credentials
+*.cred
+
+# 🚀 IDE y editores de código
+# VS Code (importante para tu entorno)
+.vscode/
+!.vscode/settings.json   # Excepción si quieres compartir configuraciones estándar
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ / PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+target/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+.metadata/
+
+# Sublime Text
+*.sublime-*
+*.sublime-workspace
+
+# 🐧 WSL / Linux / Mac
+# Archivos del sistema que no deben subirse
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.temp
+
+# 🔐 Archivos de configuración sensibles
+# NUNCA subir credenciales o configuraciones privadas
+.env
+*.env
+config/*.json
+!config/spark_config.json          # Excepción: configuraciones generales (sin credenciales)
+!config/mongodb_config_template.json   # Plantilla (sin datos reales)
+credentials.json
+secrets/
+*.pem
+*.key
+*.crt
+
+# 📦 Archivos comprimidos y binarios grandes
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.dmg
+*.exe
+*.msi
+*.bin
+
+# 🧪 Cobertura de pruebas y reportes
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+test_results/
+
+# 📚 Documentación generada
+docs/_build/
+docs/build/
+site/
+*.pdf
+!docs/figma_prototype/   # Excepción para imágenes de prototipos
+
+# 🗄️ Archivos de base de datos
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# ⚡ Logs varios
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# 📁 Directorios a mantener vacíos (pero necesarios para la estructura)
+**keep
+!.gitkeep
