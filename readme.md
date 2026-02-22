@@ -20,45 +20,9 @@ DATOS CRUDOS (CSV) → BRONZE (Parquet) → SILVER (Limpieza) → GOLD (KPIs) �
 | Git/GitHub | - | Control de versiones |
 | Jenkins | - | Integración continua |
 
-## 📂 Estructura del Proyecto
-topicos-sales-prediction/
-├── .venv/ # Entorno virtual
-├── config/ # Archivos de configuración
-│ ├── mongodb_config.json
-│ └── spark_config.json
-├── data/ # Datos procesados (ignorado por git)
-│ ├── bronze/ # Datos crudos en Parquet
-│ ├── silver/ # Datos limpios
-│ └── gold/ # KPIs y métricas
-├── documentation/ # Anexos y evidencias
-│ └── anexos/ # Capturas para el informe
-│ ├── anexo1_foto_equipo.png
-│ ├── anexo2_vscode_structure.png
-│ ├── anexo3_github_structure.png
-│ ├── anexo4_spark_executions/
-│ ├── anexo5_mongodb_export/
-│ └── anexo6_jenkins/
-├── jenkins/ # Pipeline de CI/CD
-│ └── Jenkinsfile
-├── notebooks/ # Análisis exploratorio
-├── scripts/ # Código PySpark por capas
-│ ├── bronze_ingest/
-│ │ └── load_to_hdfs.py
-│ ├── silver_transform/
-│ │ └── clean_data.py
-│ ├── gold_aggregate/
-│ │ └── calculate_kpis.py
-│ └── mongodb_export/
-│ └── export_to_mongodb.py
-├── sql/ # Consultas Hive
-│ ├── create_tables.hql
-│ └── analytical_queries.hql
-├── .gitignore
-├── README.md
-└── requirements.txt
-
 ## 👥 Integrantes
 - Bazan Fernandez, Yover Ivan
 - Perez Silva, Hayler
 - Rojas Arevalo, Alejandra Nicole
+##
 © 2026. Todos los derechos reservados.
