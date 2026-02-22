@@ -1,5 +1,16 @@
+# Core data processing
+pyspark==3.5.8
 pandas
-scikit-learn
+numpy
+
+# MongoDB connection
+pymongo==4.16.0
+dnspython==2.8.0
+
+# Visualization
 matplotlib
 seaborn
+
+# Utilities
 jupyter
+scikit-learn
